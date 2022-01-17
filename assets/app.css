@@ -1,0 +1,277 @@
+* {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html , body {
+    height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.chart-view {
+    margin: 10px;
+    padding: 5px;
+    width: 95%;
+    height: 380px;
+    border-radius: 15px;
+    border: 1px solid #dee2e6;
+}
+
+.title {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.control-board {
+    border-radius: 15px;
+    border: 1px solid #dee2e6;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.board-header {
+    display: block;
+    background-color: royalblue;
+    text-align: center;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.buttons {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.buttons button {
+    margin: 10px 0;
+    width: 50%;
+}
+
+.buttons .btn-start {
+    margin-right: 5px;
+}
+
+.buttons .btn-stop {
+    margin-left: 5px;
+}
+
+
+.balance {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.balance h4 {
+    color: #167bc9;
+    margin-bottom: 10px;
+}
+
+.balance span {
+    color:rgb(196, 92, 7);
+    font-weight: bold;
+}
+
+.balance .btc div {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: rgb(109, 109, 109);
+}
+
+.balance .usdt div {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: rgb(109, 109, 109);
+}
+
+.balance .total-usd div {
+    display: inline-block;
+    color: rgb(109, 109, 109);
+}
+
+.trading-log {
+    width: 90%;
+    height: 418px;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 7px;
+}
+
+.stack-log {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -17px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.stack-element {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 2px;
+    background-color: rgb(236, 236, 236);
+    display: flex;
+    border-radius: 7px;
+    border: 1px solid rgb(212, 212, 212);
+    animation: slideTag 1s forwards;
+    right: -100%;
+    position: relative;
+    overflow: hidden;
+}
+
+  /*Log animation*/
+
+  @keyframes slideTag {
+    100% { right: 0; }
+}
+
+.trade-decision {
+    width: 180px;
+    padding: 0 3px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.trade-decision-buy {
+    background-color: #15b481;
+    color: white;
+}
+
+.trade-decision-sell {
+    background-color: #f6465d;
+    color: white;
+}
+
+.trade-decision-donothing {
+    background-color: #ecc31e;
+    color: white;
+}
+
+.trade-info {
+    width: 100%;
+    display: block;
+    line-height: 50px;
+}
+
+.trade-symbol {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    color: rgb(114, 124, 134);
+    font-weight: bold;
+}
+
+.trade-detail {
+    width: 100%;
+    line-height: 25px;
+    padding-left: 10px;
+    color: rgb(114, 124, 134);
+    font-size: 14px;
+}
+
+/* Title animation */
+
+.typewriter h2 {
+    color: rgb(0, 0, 0);
+    font-family: monospace;
+    width: 895px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 7s steps(60, end),
+      blink-caret .5s step-end infinite;
+}
+  
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 900px }
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+/* loading animation */
+
+.running .line1 {
+    animation: runningTrade 1.5s 1s infinite;
+    animation-play-state: paused;
+}
+.running .line2 {
+    animation: runningTrade 1.5s 0.5s infinite;
+    animation-play-state: paused;
+}
+.running .line3 {
+    animation: runningTrade 1.5s 0s infinite;
+    animation-play-state: paused;
+}
+
+.running-wrap {
+    margin-top: 10px;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.line1, .line2, .line3 {
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    border-radius: 15px;
+    background-color: #4b9cdb;
+}
+
+@keyframes runningTrade {
+    0% {
+      height: 5px;
+    }
+    50% {
+      height: 15px;
+    }
+    100% {
+      height: 5px;
+    }
+}
+
+/*Button*/
+
+.settings-button {
+    background-color: #9c9c9c;
+    color: #ffffff;
+    padding: 1em 1em;
+    height: 0.5em;
+    width: 0.5em;
+    border-radius: 100%;
+    bottom: 1rem;
+    right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .settings-button, .settings-button__icon {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .settings-button:hover {
+    background-color: #575757;
+    cursor: pointer;
+  }
+  
+  .settings-button:hover .settings-button__icon {
+    transform: rotate(180deg);
+  }

@@ -1,0 +1,22 @@
+{
+  "name": "bottradecrypto",
+  "version": "1.0.0",
+  "description": "Auto Trading",
+  "main": "bot.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "the.dt",
+  "license": "MIT",
+  "dependencies": {
+    "ccxt": "^1.57.78",
+    "delay": "^5.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
